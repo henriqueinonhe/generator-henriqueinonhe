@@ -91,7 +91,7 @@ const ScaffoldingData = (answers) => ({
       /* Other */
       //Loads environment variables from .env
       "dotenv",
-      //Tool to audit dependencies
+      //Tool to audit modules dependencies on one another
       "dependency-cruiser",
       //Documentation generation for typescript
       "typedoc",
@@ -101,7 +101,18 @@ const ScaffoldingData = (answers) => ({
     ].filter(entry => entry)
   },
   Node: {
-
+    dependencies: [
+      "lodash"
+    ],
+    devDependencies: [
+      "typescript",
+      "@types/node",
+      "@types/lodash",
+      "eslint",
+      "@typescript-eslint/eslint-plugin",
+      "@typescript-eslint/parser",
+      "dependency-cruiser",
+    ]
   }
 }[answers.projectType]);
 

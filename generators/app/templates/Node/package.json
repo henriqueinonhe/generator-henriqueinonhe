@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "buildAndRun": "tsc -p . && node ./dist/index.js"
+  }
+}
