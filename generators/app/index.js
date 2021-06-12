@@ -108,10 +108,13 @@ const ScaffoldingData = (answers) => ({
       "typescript",
       "@types/node",
       "@types/lodash",
+      "@types/jest",
       "eslint",
       "@typescript-eslint/eslint-plugin",
       "@typescript-eslint/parser",
       "dependency-cruiser",
+      "jest",
+      "ts-jest",
     ]
   }
 }[answers.projectType]);
