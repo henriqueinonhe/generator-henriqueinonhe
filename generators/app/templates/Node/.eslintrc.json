@@ -84,7 +84,6 @@
       ],
       "no-fallthrough": "off",
       "no-debugger": "warn",
-      "react/prop-types": "warn",
       "@typescript-eslint/ban-types": "off",
       "@typescript-eslint/type-annotation-spacing": [
           "warn",
