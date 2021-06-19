@@ -166,6 +166,6 @@ module.exports = class extends Generator {
     const dependencies = ScaffoldingData(this.answers).dependencies;
     const devDependencies = ScaffoldingData(this.answers).devDependencies;
     this.spawnCommandSync("npm", ["install", ...dependencies, "--legacy-peer-deps"]);
-    this.spawnCommandSync("npm", ["install", ...devDependencies], "--save-dev --legacy-peer-deps");
+    this.spawnCommandSync("npm", ["install", ...devDependencies, "--save-dev --legacy-peer-deps"]);
   }
 }
