@@ -78,7 +78,7 @@ const config = env => {
       path: path.resolve(__dirname, "public"),
       filename: env.NODE_ENV === "development" ? "[fullhash].[name].js" : "[fullhash].[name].js",
       pathinfo: false,
-      assetModuleFilename: "assets/[name].[ext]",
+      assetModuleFilename: "assets/[name][ext]",
       //So that every resource will be served as if the URL was "/" (client side routing)
       publicPath: "/",
       clean: true
