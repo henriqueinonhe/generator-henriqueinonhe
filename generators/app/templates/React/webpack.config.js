@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 
 //Plugins
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
 const WatchMissingNodeModulesPlugin = require("@nenado/watch-missing-node-modules-plugin");
@@ -81,7 +80,8 @@ const config = env => {
       pathinfo: false,
       assetModuleFilename: "assets/[name].[ext]",
       //So that every resource will be served as if the URL was "/" (client side routing)
-      publicPath: "/"
+      publicPath: "/",
+      clean: true
     },
     module: {
       strictExportPresence: true,
@@ -117,7 +117,6 @@ const config = env => {
         include: /src/
       }),
       new WatchMissingNodeModulesPlugin(),
-      new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         title: "Title",
         filename: "index.html",

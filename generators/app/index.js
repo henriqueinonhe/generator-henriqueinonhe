@@ -58,8 +58,6 @@ const ScaffoldingData = (answers) => ({
       "case-sensitive-paths-webpack-plugin",
       //Tracks circular dependencies among modules
       "circular-dependency-plugin",
-      //Cleans build directory automatically
-      "clean-webpack-plugin",
       //Compresses static assets
       "compression-webpack-plugin",
       //Enables importing CSS files
