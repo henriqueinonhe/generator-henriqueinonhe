@@ -17,13 +17,7 @@ const CircularDependencyPlugin = require("circular-dependency-plugin");
 
 //Initializing Environment Variables
 dotenv.config();
-
-//Used in DefinePlugin to automatically make all
-//environment variables available
-const environmentVariablesObject = {};
-for(const key in process.env) {
-  environmentVariablesObject[`process.env.${key}`] = JSON.stringify(process.env[key]);
-}
+const environmentVariables = [];
 
 const config = env => {
   const srcPath = path.resolve(__dirname, "src");
@@ -110,7 +104,7 @@ const config = env => {
       cacheWithContext: false
     },
     plugins: [
-      new webpack.DefinePlugin(environmentVariablesObject),
+      new webpack.EnvironmentPlugin(environmentVariables),
       new ForkTsCheckerWebpackPlugin({
         async: env.NODE_ENV === "development",
         typescript: {
