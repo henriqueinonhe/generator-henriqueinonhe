@@ -230,13 +230,29 @@ const ScaffoldingData = (answers) => ({
   "Backend Interview": {
     dependencies: [
       "lodash",
-      "Joi"
+      "Joi",
+      "typeorm",
+      "reflect-metadata",
+      "axios",
+      "big.js",
+      "compression",
+      "cors",
+      "dotenv",
+      "express",
+      "mysql2",
+      "randexp",
+      "uuid"
     ],
     devDependencies: [
+      /* Typescript Support */
       "typescript",
       "@types/node",
-      "@types/lodash",
       "@types/jest",
+      "@types/big.js",
+      "@types/cors",
+      "@types/express",
+      "@types/uuid",
+
       "eslint",
       "@typescript-eslint/eslint-plugin",
       "@typescript-eslint/parser",
