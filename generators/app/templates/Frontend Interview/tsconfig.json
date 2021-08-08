@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es2015",
+    "jsx": "react",
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true, 
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "types": ["jest", "@types/testing-library__jest-dom", "node"]
+  },
+  // "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "tests"],
+  "typedocOptions": {
+    "out": "docs",
+    "inputFiles":["./src"],
+    "mode": "module",
+    "ignoreCompilerErrors": true,
+    "excludeNotExported": true
+  }
+}
