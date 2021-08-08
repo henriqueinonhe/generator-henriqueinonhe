@@ -16,6 +16,7 @@ const ScaffoldingData = (answers) => ({
       "react-dom",
       //Client side routing
       "react-router",
+      "react-router-dom",
       //Animations for React
       "react-spring",
       //CSS in JS
@@ -39,7 +40,8 @@ const ScaffoldingData = (answers) => ({
       "@types/react-dom",
       "@types/react-router",
       "@types/react-router-dom",
-      "@types/styled-components",
+      "@types/styled-components",,
+      "@types/testing-library__jest-dom",
       
       /* Webpack - Build tool */
       "webpack",
@@ -131,6 +133,7 @@ const ScaffoldingData = (answers) => ({
       "react-dom",
       //Client side routing
       "react-router",
+      "react-router-dom",
       //Animations for React
       "react-spring",
       //CSS in JS
@@ -163,6 +166,7 @@ const ScaffoldingData = (answers) => ({
       "@types/react-router-dom",
       "@types/styled-components",
       "@types/jest",
+      "@types/testing-library__jest-dom",
       
       /* Webpack - Build tool */
       "webpack",
