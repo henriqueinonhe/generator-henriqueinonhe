@@ -1,0 +1,18 @@
+{
+  "jest": {
+    "roots": [
+        "YOUR_TESTS_LOCATION"
+    ],
+    "transform": {
+        "^.+\\.[jt]sx?$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+        "YOUR_TESTS_LOCATION"
+    ]
+  },
+  "scripts": {
+    "buildAndRun": "tsc -p . && node ./dist/index.js",
+    "watchAndRun": "tsc -p . --watch & npx nodemon ./dist/index.js",
+    "test": "jest --collectCoverage"
+  }
+}

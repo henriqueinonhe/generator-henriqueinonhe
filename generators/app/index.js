@@ -100,7 +100,8 @@ const ScaffoldingData = (answers) => ({
   },
   Node: {
     dependencies: [
-      "lodash"
+      "lodash",
+      "joi"
     ],
     devDependencies: [
       "typescript",
@@ -227,8 +228,23 @@ const ScaffoldingData = (answers) => ({
     ].filter(entry => entry)
   },
   "Backend Interview": {
-    dependencies: [],
-    devDependencies: []
+    dependencies: [
+      "lodash",
+      "Joi"
+    ],
+    devDependencies: [
+      "typescript",
+      "@types/node",
+      "@types/lodash",
+      "@types/jest",
+      "eslint",
+      "@typescript-eslint/eslint-plugin",
+      "@typescript-eslint/parser",
+      "dependency-cruiser",
+      "jest",
+      "ts-jest",
+      "nodemon"
+    ]
   }
 }[answers.projectType]);
 
@@ -259,7 +275,8 @@ module.exports = class extends Generator {
         ]
       },
       {
-        when: answers => answers.projectType === "React",
+        when: answers => answers.projectType === "React" || 
+                         answers.projectType === "Frontend Interview",
         type: "confirm",
         name: "useCypress",
         message: "Do you want to use Cypress?"
