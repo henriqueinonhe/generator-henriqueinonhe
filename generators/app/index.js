@@ -234,7 +234,7 @@ const ScaffoldingData = (answers) => ({
   "Backend Interview": {
     dependencies: [
       "lodash",
-      "Joi",
+      "joi",
       "typeorm",
       "reflect-metadata",
       "axios",
